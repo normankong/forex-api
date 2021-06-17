@@ -4,10 +4,10 @@ This is a API service to provide the Forex currency quote, host on Cloudflare Wo
 Data source from [Financial Modeling Prep](https://financialmodelingprep.com/). Register your free API Key [here](https://financialmodelingprep.com/register).
 
 ### To use directly
-https://forex.normankong.workers.dev/                  (All Currency)
-https://forex.normankong.workers.dev/HKD               (Match all Currency with this ccy, return in HKD/XXX)
-https://forex.normankong.workers.dev/HKD?forward=false (Match all Currency with this ccy, return in XXX/HKD)
-https://forex.normankong.workers.dev/JPYHKD            (Match only the specific pair)
+https://forex.normankong.workers.dev/                  (All Currency)  
+https://forex.normankong.workers.dev/HKD               (Match all Currency with this ccy, return in HKD/XXX)  
+https://forex.normankong.workers.dev/HKD?forward=false (Match all Currency with this ccy, return in XXX/HKD)  
+https://forex.normankong.workers.dev/JPYHKD            (Match only the specific pair)  
 
 
 ### To Build 
