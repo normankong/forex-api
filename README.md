@@ -1,4 +1,5 @@
 # Real Time Forex API
+[![Publish](https://github.com/normankong/forex-api/actions/workflows/main.yml/badge.svg)](https://github.com/normankong/forex-api/actions/workflows/main.yml)  
 
 This is a API service to provide the Forex currency quote, host on Cloudflare Worker platform.  
 Data source from [Financial Modeling Prep](https://financialmodelingprep.com/). Register your free API Key [here](https://financialmodelingprep.com/register).
