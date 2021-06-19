@@ -1,0 +1,39 @@
+name: Publish
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Jobs
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout
+      - uses: actions/checkout@v2
+
+      # List Folder
+      - name: List Folders
+        run: ls -altr $GITHUB_WORKSPACE
+
+      # Install Node Modules
+      - name: Install Module
+        run: npm install
+
+      # Pack Code
+      - name: Pack Code
+        run: npm run pack
+
+      # Publish to Cloudflare
+      - name: Publish
+        uses: cloudflare/wrangler-action@1.3.0
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+
