@@ -29,9 +29,12 @@ API Key is stored in the Cloudflare KV (Key-value) via the namespace binding
 ```
 wrangler kv:namespace create "NAMESPACE"
 wrangler kv:namespace create "NAMESPACE" --preview
-wrangler kv:key put --binding=NAMESPACE "API_KEY" "XXXXXXXXXXX"
+wrangler kv:namespace list | jq .
+wrangler kv:namespace list | jq '.[] | select(.title=="forex-NAMESPACE")' | jq .id -r
+wrangler kv:namespace list | jq '.[] | select(.title=="forex-NAMESPACE_preview")' | jq .id -r  
+wrangler kv:key put -n fb90fd42ec054036a4994aef8cdcc345 "API_KEY" "XXXXXXXXXX" 
+wrangler kv:key put -n c91b7197d519468ab7dc50d721331882 "API_KEY" "XXXXXXXXXX"
 ```
-Important Note : For development environment, the API_KEY value need to stored manually via Cloudflare website.
 
 ### Sample Response
 ```json
